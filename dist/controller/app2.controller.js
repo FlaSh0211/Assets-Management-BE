@@ -9,26 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppController = void 0;
+exports.App2Controller = void 0;
 const common_1 = require("@nestjs/common");
-const app_service_1 = require("./app.service");
-let AppController = class AppController {
-    constructor(appService) {
-        this.appService = appService;
+const app2_service_1 = require("../service/app2.service");
+let App2Controller = class App2Controller {
+    constructor(app2Service) {
+        this.app2Service = app2Service;
     }
-    getHello() {
-        return this.appService.getHello();
+    getBye() {
+        return this.app2Service.getBye();
     }
 };
 __decorate([
-    (0, common_1.Get)(),
+    (0, common_1.Get)('cats'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
-], AppController.prototype, "getHello", null);
-AppController = __decorate([
+], App2Controller.prototype, "getBye", null);
+App2Controller = __decorate([
     (0, common_1.Controller)(),
-    __metadata("design:paramtypes", [app_service_1.AppService])
-], AppController);
-exports.AppController = AppController;
-//# sourceMappingURL=app.controller.js.map
+    __metadata("design:paramtypes", [app2_service_1.App2Service])
+], App2Controller);
+exports.App2Controller = App2Controller;
+//# sourceMappingURL=app2.controller.js.map
